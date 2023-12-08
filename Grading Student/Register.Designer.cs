@@ -44,7 +44,9 @@
             txt_pass = new TextBox();
             txt_email = new TextBox();
             ckb_show1 = new CheckBox();
-            cb_name = new ComboBox();
+            cb_role = new ComboBox();
+            txt_name = new TextBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(-3, -3);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1019, 584);
+            pictureBox1.Size = new Size(988, 588);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -61,9 +63,9 @@
             // 
             btn_exit.BackColor = Color.White;
             btn_exit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_exit.Location = new Point(810, 389);
+            btn_exit.Location = new Point(810, 429);
             btn_exit.Name = "btn_exit";
-            btn_exit.Size = new Size(106, 56);
+            btn_exit.Size = new Size(127, 47);
             btn_exit.TabIndex = 1;
             btn_exit.Text = "Exit";
             btn_exit.UseVisualStyleBackColor = false;
@@ -73,9 +75,9 @@
             // 
             btn_register.BackColor = Color.White;
             btn_register.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_register.Location = new Point(647, 389);
+            btn_register.Location = new Point(654, 429);
             btn_register.Name = "btn_register";
-            btn_register.Size = new Size(106, 56);
+            btn_register.Size = new Size(117, 47);
             btn_register.TabIndex = 2;
             btn_register.Text = "Register";
             btn_register.UseVisualStyleBackColor = false;
@@ -198,7 +200,7 @@
             txt_email.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             txt_email.Location = new Point(731, 320);
             txt_email.Name = "txt_email";
-            txt_email.Size = new Size(182, 29);
+            txt_email.Size = new Size(185, 29);
             txt_email.TabIndex = 14;
             // 
             // ckb_show1
@@ -211,24 +213,46 @@
             ckb_show1.Size = new Size(15, 14);
             ckb_show1.TabIndex = 15;
             ckb_show1.UseVisualStyleBackColor = true;
-            ckb_show1.CheckedChanged += checkBox2_CheckedChanged;
+            ckb_show1.CheckedChanged += checkBox1_CheckedChanged;
             // 
-            // cb_name
+            // cb_role
             // 
-            cb_name.BackColor = Color.White;
-            cb_name.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            cb_name.FormattingEnabled = true;
-            cb_name.Location = new Point(731, 160);
-            cb_name.Name = "cb_name";
-            cb_name.Size = new Size(185, 29);
-            cb_name.TabIndex = 16;
+            cb_role.BackColor = Color.White;
+            cb_role.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            cb_role.FormattingEnabled = true;
+            cb_role.Location = new Point(731, 370);
+            cb_role.Name = "cb_role";
+            cb_role.Size = new Size(185, 29);
+            cb_role.TabIndex = 16;
+            // 
+            // txt_name
+            // 
+            txt_name.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_name.Location = new Point(731, 160);
+            txt_name.Name = "txt_name";
+            txt_name.Size = new Size(185, 29);
+            txt_name.TabIndex = 17;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Image = (Image)resources.GetObject("label7.Image");
+            label7.Location = new Point(540, 374);
+            label7.Name = "label7";
+            label7.Size = new Size(91, 25);
+            label7.TabIndex = 18;
+            label7.Text = "User Role";
             // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(997, 558);
-            Controls.Add(cb_name);
+            ClientSize = new Size(984, 560);
+            Controls.Add(label7);
+            Controls.Add(txt_name);
+            Controls.Add(cb_role);
             Controls.Add(ckb_show1);
             Controls.Add(txt_email);
             Controls.Add(txt_pass);
@@ -245,7 +269,7 @@
             Controls.Add(btn_exit);
             Controls.Add(pictureBox1);
             Name = "Register";
-            Text = " ";
+            Text = "Register";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -268,6 +292,8 @@
         private TextBox txt_pass;
         private TextBox txt_email;
         private CheckBox ckb_show1;
-        private ComboBox cb_name;
+        private ComboBox cb_role;
+        private TextBox txt_name;
+        private Label label7;
     }
 }

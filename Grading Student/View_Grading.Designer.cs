@@ -31,7 +31,7 @@
             dgv_view = new DataGridView();
             Student_ID = new DataGridViewTextBoxColumn();
             Student_Name = new DataGridViewTextBoxColumn();
-            DateBirth = new DataGridViewTextBoxColumn();
+            DateOfBirth = new DataGridViewTextBoxColumn();
             Email = new DataGridViewTextBoxColumn();
             Course_Name = new DataGridViewTextBoxColumn();
             Class_Name = new DataGridViewTextBoxColumn();
@@ -39,6 +39,9 @@
             label1 = new Label();
             btn_exit = new Button();
             lab_user = new Label();
+            txt_search = new TextBox();
+            label2 = new Label();
+            btn_search = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_view).BeginInit();
             SuspendLayout();
             // 
@@ -47,11 +50,11 @@
             dgv_view.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv_view.BackgroundColor = Color.White;
             dgv_view.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_view.Columns.AddRange(new DataGridViewColumn[] { Student_ID, Student_Name, DateBirth, Email, Course_Name, Class_Name, Scores });
-            dgv_view.Location = new Point(33, 116);
+            dgv_view.Columns.AddRange(new DataGridViewColumn[] { Student_ID, Student_Name, DateOfBirth, Email, Course_Name, Class_Name, Scores });
+            dgv_view.Location = new Point(33, 214);
             dgv_view.Name = "dgv_view";
             dgv_view.RowTemplate.Height = 25;
-            dgv_view.Size = new Size(995, 219);
+            dgv_view.Size = new Size(995, 155);
             dgv_view.TabIndex = 0;
             // 
             // Student_ID
@@ -66,11 +69,11 @@
             Student_Name.HeaderText = "Student Name";
             Student_Name.Name = "Student_Name";
             // 
-            // DateBirth
+            // DateOfBirth
             // 
-            DateBirth.DataPropertyName = "DateBirth";
-            DateBirth.HeaderText = "Date of Birth";
-            DateBirth.Name = "DateBirth";
+            DateOfBirth.DataPropertyName = "DateOfBirth";
+            DateOfBirth.HeaderText = "Date of Birth";
+            DateOfBirth.Name = "DateOfBirth";
             // 
             // Email
             // 
@@ -108,10 +111,10 @@
             // 
             // btn_exit
             // 
-            btn_exit.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_exit.Location = new Point(951, 363);
+            btn_exit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_exit.Location = new Point(931, 389);
             btn_exit.Name = "btn_exit";
-            btn_exit.Size = new Size(77, 44);
+            btn_exit.Size = new Size(97, 31);
             btn_exit.TabIndex = 2;
             btn_exit.Text = "Exit";
             btn_exit.UseVisualStyleBackColor = true;
@@ -126,11 +129,43 @@
             lab_user.Size = new Size(0, 21);
             lab_user.TabIndex = 3;
             // 
+            // txt_search
+            // 
+            txt_search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_search.Location = new Point(156, 109);
+            txt_search.Name = "txt_search";
+            txt_search.Size = new Size(112, 29);
+            txt_search.TabIndex = 5;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(45, 112);
+            label2.Name = "label2";
+            label2.Size = new Size(82, 21);
+            label2.TabIndex = 6;
+            label2.Text = "Student ID";
+            // 
+            // btn_search
+            // 
+            btn_search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_search.Location = new Point(33, 161);
+            btn_search.Name = "btn_search";
+            btn_search.Size = new Size(94, 31);
+            btn_search.TabIndex = 7;
+            btn_search.Text = "Search";
+            btn_search.UseVisualStyleBackColor = true;
+            btn_search.Click += btn_search_Click;
+            // 
             // ViewGrading
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1061, 431);
+            ClientSize = new Size(1061, 441);
+            Controls.Add(btn_search);
+            Controls.Add(label2);
+            Controls.Add(txt_search);
             Controls.Add(lab_user);
             Controls.Add(btn_exit);
             Controls.Add(label1);
@@ -148,9 +183,12 @@
         private Label label1;
         private Button btn_exit;
         private Label lab_user;
+        private TextBox txt_search;
+        private Label label2;
+        private Button btn_search;
         private DataGridViewTextBoxColumn Student_ID;
         private DataGridViewTextBoxColumn Student_Name;
-        private DataGridViewTextBoxColumn DateBirth;
+        private DataGridViewTextBoxColumn DateOfBirth;
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn Course_Name;
         private DataGridViewTextBoxColumn Class_Name;
